@@ -1,4 +1,3 @@
-require './lib/temperature_api'
 require 'net/http'
 
 describe  "gettting the temperature from the api" do

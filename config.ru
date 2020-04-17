@@ -1,3 +1,3 @@
 require './app'
 
-run Thermostat
+run Thermostat_server

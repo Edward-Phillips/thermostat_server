@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'json'
 
-class Thermostat < Sinatra::Base
+class Thermostat_server < Sinatra::Base
 
   get "/" do
     'HALLO WORLD'
