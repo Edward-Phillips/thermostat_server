@@ -16,4 +16,9 @@ describe Thermostat do
   it " should be able to update whether the power saving mode is on" do
     expect(subject).to respond_to(:power_saving=)
   end
+
+  it " should retain the temperature" do
+    subject.temperature = 25
+    expect(subject.temperature).to eq(25)
+  end
 end
