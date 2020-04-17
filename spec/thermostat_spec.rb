@@ -21,4 +21,12 @@ describe Thermostat do
     subject.temperature = 25
     expect(subject.temperature).to eq(25)
   end
+
+  it " can get the thermostat temperature" do
+    expect(Thermostat).to respond_to(:get_temp)
+  end
+
+  it " can set the thermonstat temperature" do
+    expect(Thermostat).to respond_to(:set_temp)
+  end
 end
