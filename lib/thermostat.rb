@@ -1,8 +1,9 @@
 class Thermostat
- attr_accessor :temperature, :power_saving
   def self.get_temp
+    @temp
   end
 
-  def self.set_temp
+  def self.set_temp(temp)
+    @temp = temp
   end
  end
