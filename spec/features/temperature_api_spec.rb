@@ -1,9 +1,11 @@
 require 'net/http'
 
-xdescribe  "gettting the temperature from the api" do
-  it " should tell you the temperature when queried" do
-    url = URI.parse('http://localhost:9292/temperature/')
-    result = Net::HTTP.get(url)
-    expect(JSON.parse(result)).to eq(20)
+describe  "gettting the temperature from the api" do
+  it " should store the temperature when posted" do
+    post_url = URI.parse('http://localhost:9292/temperature/')
+    get_url = URI.parse('http://localhost:9292/temperature/')
+    Net::HTTP.post(post_url, 'temp=25' )
+    result = Net::HTTP.get(get_url)
+    expect(JSON.parse(result)).to eq(25)
   end
 end

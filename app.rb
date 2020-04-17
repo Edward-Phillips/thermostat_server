@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'json'
+require './lib/thermostat'
 
 class Thermostat_server < Sinatra::Base
 
@@ -8,6 +9,10 @@ class Thermostat_server < Sinatra::Base
   end
 
   get "/temperature/" do
-    JSON.generate(20)
+    Thermostat.get_temp;
+  end
+
+  post '/temperature/' do
+    Thermostat.set_temp(params['temp'])
   end
 end
