@@ -1,6 +1,6 @@
 require 'net/http'
 
-describe  "gettting the temperature from the api" do
+describe  "getting the temperature from the api" do
   it " should store the temperature when posted" do
     post_url = URI.parse('http://localhost:9292/temperature/')
     get_url = URI.parse('http://localhost:9292/temperature/')

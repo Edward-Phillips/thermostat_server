@@ -15,4 +15,12 @@ class Thermostat_server < Sinatra::Base
   post '/temperature/' do
     Thermostat.set_temp(params['temp'])
   end
+
+  post '/power-saving/' do
+    Thermostat.set_power_saving(params['saving'])
+  end
+
+  get '/power-saving/' do
+    Thermostat.get_power_saving
+  end
 end
