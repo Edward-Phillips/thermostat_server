@@ -12,4 +12,8 @@ describe Thermostat do
   it " should be able to store whether the power saving mode is on" do
     expect(subject).to respond_to(:power_saving)
   end
+
+  it " should be able to update whether the power saving mode is on" do
+    expect(subject).to respond_to(:power_saving=)
+  end
 end
