@@ -1,4 +1,4 @@
 class Thermostat
 
- attr_reader :temperature
+ attr_accessor :temperature
 end
